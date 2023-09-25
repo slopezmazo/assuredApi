@@ -3228,3 +3228,270 @@
 2023-09-25 17:06:35.442 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
 2023-09-25 17:06:35.760 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
 2023-09-25 17:06:35.761 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 18:05:32.016 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 18:05:32.022 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of resources
+2023-09-25 18:05:32.023 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 18:05:34.431 INFO [api.stepDefinitions.ClientSteps:22] - [
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": true,
+        "id": "3"
+    },
+    {
+        "name": "Recycled Wooden Bike",
+        "trademark": "MacGyver - Nader",
+        "stock": 98196,
+        "price": 27421.92,
+        "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+        "tags": "email",
+        "is_active": true,
+        "id": "4"
+    },
+    {
+        "name": "Intelligent Steel Fish",
+        "trademark": "Stokes - Yost",
+        "stock": 24835,
+        "price": 11243.02,
+        "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+        "tags": "createdAt",
+        "is_active": true,
+        "id": "5"
+    },
+    {
+        "name": "Electronic Plastic Tuna",
+        "trademark": "Towne, Spinka and Zieme",
+        "stock": 72539,
+        "price": 71089.12,
+        "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+        "tags": "password",
+        "is_active": false,
+        "id": "6"
+    },
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": false,
+        "id": "7"
+    },
+    {
+        "name": "Prueba de oriental",
+        "trademark": "Mor, Zulauf and Schaefer",
+        "stock": 50000,
+        "price": 27000,
+        "description": "I like pants",
+        "tags": "new status",
+        "is_active": true,
+        "id": "8"
+    }
+]
+2023-09-25 18:05:34.965 INFO [api.stepDefinitions.ClientSteps:13] - the response should have a status code of 200
+2023-09-25 18:07:28.445 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 18:07:28.451 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of resources
+2023-09-25 18:07:28.452 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 18:07:33.423 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 18:07:33.428 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of resources
+2023-09-25 18:07:33.428 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 18:07:35.695 INFO [api.stepDefinitions.ClientSteps:22] - [
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": true,
+        "id": "3"
+    },
+    {
+        "name": "Recycled Wooden Bike",
+        "trademark": "MacGyver - Nader",
+        "stock": 98196,
+        "price": 27421.92,
+        "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+        "tags": "email",
+        "is_active": true,
+        "id": "4"
+    },
+    {
+        "name": "Intelligent Steel Fish",
+        "trademark": "Stokes - Yost",
+        "stock": 24835,
+        "price": 11243.02,
+        "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+        "tags": "createdAt",
+        "is_active": true,
+        "id": "5"
+    },
+    {
+        "name": "Electronic Plastic Tuna",
+        "trademark": "Towne, Spinka and Zieme",
+        "stock": 72539,
+        "price": 71089.12,
+        "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+        "tags": "password",
+        "is_active": false,
+        "id": "6"
+    },
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": false,
+        "id": "7"
+    },
+    {
+        "name": "Prueba de oriental",
+        "trademark": "Mor, Zulauf and Schaefer",
+        "stock": 50000,
+        "price": 27000,
+        "description": "I like pants",
+        "tags": "new status",
+        "is_active": true,
+        "id": "8"
+    }
+]
+2023-09-25 18:07:36.269 INFO [api.stepDefinitions.ClientSteps:13] - the response should have a status code of 200
+2023-09-25 18:09:53.954 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 18:09:53.959 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of resources
+2023-09-25 18:09:53.959 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 18:09:56.342 INFO [api.stepDefinitions.ClientSteps:22] - [
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": true,
+        "id": "3"
+    },
+    {
+        "name": "Recycled Wooden Bike",
+        "trademark": "MacGyver - Nader",
+        "stock": 98196,
+        "price": 27421.92,
+        "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+        "tags": "email",
+        "is_active": true,
+        "id": "4"
+    },
+    {
+        "name": "Intelligent Steel Fish",
+        "trademark": "Stokes - Yost",
+        "stock": 24835,
+        "price": 11243.02,
+        "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+        "tags": "createdAt",
+        "is_active": true,
+        "id": "5"
+    },
+    {
+        "name": "Electronic Plastic Tuna",
+        "trademark": "Towne, Spinka and Zieme",
+        "stock": 72539,
+        "price": 71089.12,
+        "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+        "tags": "password",
+        "is_active": false,
+        "id": "6"
+    },
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": false,
+        "id": "7"
+    },
+    {
+        "name": "Prueba de oriental",
+        "trademark": "Mor, Zulauf and Schaefer",
+        "stock": 50000,
+        "price": 27000,
+        "description": "I like pants",
+        "tags": "new status",
+        "is_active": true,
+        "id": "8"
+    }
+]
+2023-09-25 18:09:56.897 INFO [api.stepDefinitions.ClientSteps:13] - the response should have a status code of 200
+2023-09-25 18:10:10.437 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 18:10:10.441 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of resources
+2023-09-25 18:10:10.441 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 18:10:12.677 INFO [api.stepDefinitions.ClientSteps:22] - [
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": true,
+        "id": "3"
+    },
+    {
+        "name": "Recycled Wooden Bike",
+        "trademark": "MacGyver - Nader",
+        "stock": 98196,
+        "price": 27421.92,
+        "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+        "tags": "email",
+        "is_active": true,
+        "id": "4"
+    },
+    {
+        "name": "Intelligent Steel Fish",
+        "trademark": "Stokes - Yost",
+        "stock": 24835,
+        "price": 11243.02,
+        "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+        "tags": "createdAt",
+        "is_active": true,
+        "id": "5"
+    },
+    {
+        "name": "Electronic Plastic Tuna",
+        "trademark": "Towne, Spinka and Zieme",
+        "stock": 72539,
+        "price": 71089.12,
+        "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+        "tags": "password",
+        "is_active": false,
+        "id": "6"
+    },
+    {
+        "name": "NewName",
+        "trademark": "NewTradeMark",
+        "stock": 1000,
+        "price": 99.99,
+        "description": "description",
+        "tags": "NewTag",
+        "is_active": false,
+        "id": "7"
+    },
+    {
+        "name": "Prueba de oriental",
+        "trademark": "Mor, Zulauf and Schaefer",
+        "stock": 50000,
+        "price": 27000,
+        "description": "I like pants",
+        "tags": "new status",
+        "is_active": true,
+        "id": "8"
+    }
+]
+2023-09-25 18:10:13.230 INFO [api.stepDefinitions.ClientSteps:13] - the response should have a status code of 200
