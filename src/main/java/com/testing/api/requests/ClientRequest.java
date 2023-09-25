@@ -14,6 +14,10 @@ import java.util.List;
 public class ClientRequest extends BaseRequest {
     private String endpoint;
 
+    /**
+     * this functions calls the requestGet function to returns the response to the get request of clients
+     * @return Response
+     */
     public Response getClients() {
         endpoint = String.format(Constants.URL, Constants.CLIENTS_PATH);
         return requestGet(endpoint, createBaseHeaders());
@@ -43,11 +47,20 @@ public class ClientRequest extends BaseRequest {
         return response.as(Client.class);
     }
 
+    /**
+     * This function generate the list of clients according to a Response
+     * @param response
+     * @return List<Client>
+     */
     public List<Client> getClientsEntity(@NotNull Response response) {
         JsonPath jsonPath = response.jsonPath();
         return jsonPath.getList("", Client.class);
     }
 
+    /**
+     * this functions creates a generic client
+     * @return Response
+     */
     public Response createDefaultClient() {
         JsonFileReader jsonFile = new JsonFileReader();
         return this.createClient(jsonFile.getClientByJson(Constants.DEFAULT_CLIENT_FILE_PATH));

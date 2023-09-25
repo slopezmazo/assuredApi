@@ -1,0 +1,3230 @@
+2023-09-25 14:55:30.655 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 14:55:30.658 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Read details of an existing client
+2023-09-25 14:55:30.659 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 14:55:31.013 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 14:55:31.014 INFO [api.stepDefinitions.ClientSteps:33] - I retrieve the details of the client with ID 1
+2023-09-25 14:55:31.015 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 14:55:31.018 INFO [api.stepDefinitions.ClientSteps:63] - the response should have the following details:| Name   | LastName | Gender | Country  | City   | Id |
+| Manuel | Munoz    | Man    | Colombia | Bogota | 1  |
+
+2023-09-25 14:55:31.020 INFO [api.stepDefinitions.ClientSteps:73] - validates the response with client JSON schema
+2023-09-25 14:55:31.028 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 14:55:31.028 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Create a new client
+2023-09-25 14:55:31.029 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 14:55:31.029 INFO [api.stepDefinitions.ClientSteps:28] - I have a client with the following details:| Name | LastName | Gender | Country | City     |
+| John | Doe      | Male   | USA     | New York |
+
+2023-09-25 14:55:31.030 INFO [api.stepDefinitions.ClientSteps:43] - I send a POST request to create a client
+2023-09-25 14:55:31.030 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 201
+2023-09-25 14:55:31.031 INFO [api.stepDefinitions.ClientSteps:68] - the response should include the details of the created client
+2023-09-25 14:55:31.031 INFO [api.stepDefinitions.ClientSteps:73] - validates the response with client JSON schema
+2023-09-25 14:55:31.038 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 14:55:31.038 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: View all the clients
+2023-09-25 14:55:31.038 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 14:55:31.039 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 14:55:31.039 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 14:55:31.039 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 14:55:31.040 INFO [api.stepDefinitions.ClientSteps:78] - validates the response with client list JSON schema
+2023-09-25 14:55:31.045 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 14:55:31.045 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Update client details
+2023-09-25 14:55:31.046 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 14:55:31.046 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 14:55:31.046 INFO [api.stepDefinitions.ClientSteps:33] - I retrieve the details of the client with ID 1
+2023-09-25 14:55:31.048 INFO [api.stepDefinitions.ClientSteps:53] - I send a PUT request to update the client with ID {
+  "name": "Maria",
+  "lastName": "Gomez",
+  "gender": "Female",
+  "country": "Spain",
+  "city": "Barcelona"
+}1
+2023-09-25 14:55:31.049 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 14:55:31.049 INFO [api.stepDefinitions.ClientSteps:63] - the response should have the following details:| Name  | LastName | Gender | Country | City      | Id |
+| Maria | Gomez    | Female | Spain   | Barcelona | 1  |
+
+2023-09-25 14:55:31.050 INFO [api.stepDefinitions.ClientSteps:73] - validates the response with client JSON schema
+2023-09-25 14:55:31.054 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 14:55:31.055 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Delete an existing client
+2023-09-25 14:55:31.055 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 14:55:31.055 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 14:55:31.056 INFO [api.stepDefinitions.ClientSteps:48] - I send a DELETE request to delete the client with ID 1
+2023-09-25 14:55:31.057 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 14:55:31.057 INFO [api.stepDefinitions.ClientSteps:63] - the response should have the following details:| Name  | LastName | Gender | Country | City      | Id |
+| Maria | Gomez    | Female | Spain   | Barcelona | 1  |
+
+2023-09-25 14:55:31.059 INFO [api.stepDefinitions.ClientSteps:73] - validates the response with client JSON schema
+2023-09-25 15:35:47.888 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:35:47.891 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:35:47.892 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:35:48.211 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:35:48.212 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:35:48.213 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:36:44.333 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:36:44.337 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:36:44.337 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:36:44.773 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:36:44.775 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:36:44.776 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:37:42.232 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:37:42.236 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:37:42.236 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:37:42.566 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:37:42.567 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:37:42.568 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:39:05.633 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:39:05.637 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:39:05.637 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:39:05.927 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:39:05.928 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:39:05.930 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:42:22.004 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:42:22.007 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:42:22.007 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:42:22.281 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:42:22.282 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:42:22.283 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:45:35.234 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:45:35.237 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:45:35.237 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:45:35.523 INFO [api.stepDefinitions.ClientSteps:23] - there are registered clients in the system
+2023-09-25 15:45:35.524 INFO [api.stepDefinitions.ClientSteps:38] - I send a GET request to view all the clients
+2023-09-25 15:45:35.525 INFO [api.stepDefinitions.ClientSteps:58] - the response should have a status code of 200
+2023-09-25 15:45:56.972 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:45:56.975 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:45:56.976 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:45:58.763 INFO [api.stepDefinitions.ClientSteps:30] - Response: [
+    {
+        "name": "Arlene",
+        "lastName": "Reynolds",
+        "country": "Guatemala",
+        "city": "Lee's Summit",
+        "email": "Adaline_Murray26@gmail.com",
+        "phone": "(758) 351-6898",
+        "id": "3"
+    },
+    {
+        "name": "Maiya",
+        "lastName": "Schmitt",
+        "country": "Syrian Arab Republic",
+        "city": "Pensacola",
+        "email": "Otilia2@yahoo.com",
+        "phone": "(271) 591-8686",
+        "id": "4"
+    },
+    {
+        "name": "Jaylin",
+        "lastName": "MacGyver",
+        "country": "Namibia",
+        "city": "Missouri City",
+        "email": "Russ_Braun@gmail.com",
+        "phone": "1-777-247-3449 x306",
+        "id": "5"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "6"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "7"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "8"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "9"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "10"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "11"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "12"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "13"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "14"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "15"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "16"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "17"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "18"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "19"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "20"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "21"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "22"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "23"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "24"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "25"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "26"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "27"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "28"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "29"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Sift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "30"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "31"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "39"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "40"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "41"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "45"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "46"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "48"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "49"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "50"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "51"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "52"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "53"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "54"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "55"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "56"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "57"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "58"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "59"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "60"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "61"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "62"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "63"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "64"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "65"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "66"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "67"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "68"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "69"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "70"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "71"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "72"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "73"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "74"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "75"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "76"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "77"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "78"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "79"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "80"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "81"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "82"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "83"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "84"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "85"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "86"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "87"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "88"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "89"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "90"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "91"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "92"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "93"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "94"
+    },
+    {
+        "name": "Berneice",
+        "lastName": "Hintz",
+        "country": "Barbados",
+        "city": "Yorba Linda",
+        "email": "Donato43@hotmail.com",
+        "phone": "1-425-705-0487 x77466",
+        "id": "95"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "96"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "97"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "98"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "99"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "100"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "101"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "102"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "103"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "104"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "105"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "106"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "107"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "108"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "109"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "110"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "111"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "112"
+    }
+]
+2023-09-25 15:49:32.689 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:49:32.692 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:49:32.693 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:49:34.419 INFO [api.stepDefinitions.ClientSteps:30] - Response: [
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "21"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "22"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "23"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "24"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "25"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "26"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "27"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "28"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "29"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Sift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "30"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "31"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "39"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "40"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "41"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "45"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "46"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "48"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "49"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "50"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "51"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "52"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "53"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "54"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "55"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "56"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "57"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "58"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "59"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "60"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "61"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "62"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "63"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "64"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "65"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "66"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "67"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "68"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "69"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "70"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "71"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "72"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "73"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "74"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "75"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "76"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "77"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "78"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "79"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "80"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "81"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "82"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "83"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "84"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "85"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "86"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "87"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "88"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "89"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "90"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "91"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "92"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "93"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "94"
+    },
+    {
+        "name": "Berneice",
+        "lastName": "Hintz",
+        "country": "Barbados",
+        "city": "Yorba Linda",
+        "email": "Donato43@hotmail.com",
+        "phone": "1-425-705-0487 x77466",
+        "id": "95"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "96"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "97"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "98"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "99"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "100"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "101"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "102"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "103"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "104"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "105"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "106"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "107"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "108"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "109"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "110"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "111"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "112"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "113"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "114"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "115"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "116"
+    }
+]
+2023-09-25 15:49:34.723 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 15:49:35.054 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 15:49:35.055 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 15:51:29.048 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:51:29.052 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:51:29.052 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:51:31.176 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 15:51:31.469 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 15:51:31.470 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 15:54:12.553 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:54:12.555 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:54:12.555 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:54:14.408 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 15:54:14.701 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 15:54:14.702 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 15:58:58.262 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 15:58:58.265 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 15:58:58.265 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 15:59:00.431 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 15:59:00.902 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 15:59:00.902 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 16:04:28.529 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 16:04:28.533 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 16:04:28.533 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 16:04:30.820 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 16:04:31.385 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 16:04:31.387 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 16:04:49.121 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 16:04:49.125 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 16:04:49.125 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 16:04:51.534 INFO [api.stepDefinitions.ClientSteps:30] - Response: [
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "21"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "22"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "23"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "24"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "25"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "26"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "27"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "28"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "29"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Sift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "30"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "31"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "39"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "40"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "41"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "45"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "46"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "48"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "49"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "50"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "51"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "52"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "53"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "54"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "55"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "56"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "57"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "58"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "59"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "60"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "61"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "62"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "63"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "64"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "65"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "66"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "67"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "68"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "69"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "70"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "71"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "72"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "73"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "74"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "75"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "76"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "77"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "78"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "79"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "80"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "81"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "82"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "83"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "84"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "85"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "86"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "87"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "88"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "89"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "90"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "91"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "92"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "93"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "94"
+    },
+    {
+        "name": "Berneice",
+        "lastName": "Hintz",
+        "country": "Barbados",
+        "city": "Yorba Linda",
+        "email": "Donato43@hotmail.com",
+        "phone": "1-425-705-0487 x77466",
+        "id": "95"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "96"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "97"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "98"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "99"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "100"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "101"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "102"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "103"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "104"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "105"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "106"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "107"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "108"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "109"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "110"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "111"
+    },
+    {
+        "name": null,
+        "lastName": null,
+        "country": null,
+        "city": null,
+        "email": null,
+        "phone": null,
+        "id": "112"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "113"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "114"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "115"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "116"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "117"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "118"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "119"
+    }
+]
+2023-09-25 16:04:51.826 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 16:04:52.452 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 16:04:52.453 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema
+2023-09-25 17:06:32.999 INFO [api.stepDefinitions.Hooks:16] - *****************************************************************************************
+2023-09-25 17:06:33.004 INFO [api.stepDefinitions.Hooks:17] - 	Scenario: Get the List of Clients
+2023-09-25 17:06:33.004 INFO [api.stepDefinitions.Hooks:18] - *****************************************************************************************
+2023-09-25 17:06:35.110 INFO [api.stepDefinitions.ClientSteps:30] - Response: [
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "21"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "22"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "23"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "24"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "25"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "26"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "27"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "28"
+    },
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "city": "New York",
+        "email": "john-doe@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "29"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Sift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "30"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "31"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "39"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "40"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "41"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "45"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "46"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "48"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "49"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "50"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "51"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "52"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "53"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "54"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "55"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "56"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "57"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "58"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "59"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "60"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "61"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "62"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "63"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "64"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "65"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "66"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "67"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "68"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "69"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "70"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "71"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "72"
+    },
+    {
+        "name": "alejo",
+        "lastName": "lopez",
+        "country": "Colombia",
+        "city": "Cali",
+        "email": "alejo.lopez@email.com",
+        "phone": "1234567890",
+        "id": "73"
+    },
+    {
+        "name": "Santiago",
+        "lastName": "Canedo",
+        "country": "USA",
+        "city": "New York",
+        "email": "new-mail@gmail.com",
+        "phone": "427-528-7246 x97323",
+        "id": "74"
+    },
+    {
+        "name": "name",
+        "lastName": "lastName",
+        "country": "country",
+        "city": "city",
+        "email": "email@email.com",
+        "phone": "123-456-7890",
+        "id": "75"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "76"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "77"
+    },
+    {
+        "name": "Taylor",
+        "lastName": "Swift",
+        "country": "USA",
+        "city": "New York",
+        "email": "taylor-swift@gmail.com",
+        "phone": "\"1-425-705-0487 x77466",
+        "id": "78"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "79"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "80"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "81"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "82"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "83"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "84"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "85"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "86"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "87"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "88"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "89"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "90"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "91"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "92"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "93"
+    },
+    {
+        "name": "<name>",
+        "lastName": "<lastName>",
+        "country": "<country>",
+        "city": "<city>",
+        "email": "<email@email.com>",
+        "phone": "<123-456-7890>",
+        "id": "94"
+    },
+    {
+        "name": "Berneice",
+        "lastName": "Hintz",
+        "country": "Barbados",
+        "city": "Yorba Linda",
+        "email": "Donato43@hotmail.com",
+        "phone": "1-425-705-0487 x77466",
+        "id": "95"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "113"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "114"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "115"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "116"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "117"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "118"
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "country": "USA",
+        "city": "NYC",
+        "email": "alice@email.com",
+        "phone": "123-456-7890",
+        "id": "119"
+    }
+]
+2023-09-25 17:06:35.442 INFO [api.stepDefinitions.ClientSteps:55] - I send a GET request to view all the clients
+2023-09-25 17:06:35.760 INFO [api.stepDefinitions.ClientSteps:80] - the response should have a status code of 200
+2023-09-25 17:06:35.761 INFO [api.stepDefinitions.ClientSteps:104] - validates the response with client list JSON schema

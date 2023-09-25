@@ -8,6 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseRequest {
+    /**
+     * This function get an element using rest assured
+     * @param endpoint
+     * @param headers
+     * @return Response
+     */
     protected Response requestGet(String endpoint, Map<String, ?> headers) {
         return RestAssured.given()
                           .contentType(Constants.VALUE_CONTENT_TYPE)
@@ -32,6 +38,13 @@ public class BaseRequest {
                           .post(endpoint);
     }
 
+    /**
+     * this function update an element using rest assured
+     * @param endpoint
+     * @param headers
+     * @param body
+     * @return Response
+     */
     protected Response requestPut(String endpoint, Map<String, ?> headers, Object body) {
         return RestAssured.given()
                           .contentType(Constants.VALUE_CONTENT_TYPE)
@@ -40,7 +53,12 @@ public class BaseRequest {
                           .when()
                           .put(endpoint);
     }
-
+    /**
+     * this function deletes an element using rest assured
+     * @param endpoint
+     * @param headers
+     * @return Response
+     */
     protected Response requestDelete(String endpoint, Map<String, ?> headers) {
         return RestAssured.given()
                           .contentType(Constants.VALUE_CONTENT_TYPE)
@@ -49,6 +67,10 @@ public class BaseRequest {
                           .delete(endpoint);
     }
 
+    /**
+     * this function creates a header map for api requests
+     * @return Map<String, String>
+     */
     protected Map<String, String> createBaseHeaders() {
         Map<String, String> headers = new HashMap<>();
         headers.put(Constants.CONTENT_TYPE, Constants.VALUE_CONTENT_TYPE);
