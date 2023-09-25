@@ -7,12 +7,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -22,6 +20,8 @@ public class ClientSteps extends BaseStepDefinition{
 
     private final ClientRequest clientRequest = new ClientRequest();
     private Client client;
+    private static Map<String, String> clientDataMap;
+    private  Client responseClient;
 
     @Given("there are registered clients in the system")
     public void thereAreRegisteredClientsInTheSystem() {
@@ -34,11 +34,6 @@ public class ClientSteps extends BaseStepDefinition{
             logger.info(response.statusCode());
             Assert.assertEquals(201, response.statusCode());
         }
-    }
-
-    @Given("I have a client with the following details:")
-    public void iHaveAClientWithTheFollowingDetails(DataTable clientData) {
-        logger.info("I have a client with the following details:" + clientData);
     }
 
     @When("I retrieve the details of the client with ID {string}")
@@ -55,10 +50,6 @@ public class ClientSteps extends BaseStepDefinition{
         response = clientRequest.getClients();
     }
 
-    @When("I send a POST request to create a client")
-    public void iSendAPOSTRequestToCreateAClient() {
-        logger.info("I send a POST request to create a client");
-    }
 
     @When("I send a DELETE request to delete the client with ID {string}")
     public void iSendADELETERequestToDeleteTheClientWithID(String clientId) {
@@ -75,10 +66,6 @@ public class ClientSteps extends BaseStepDefinition{
         logger.info("the response should have the following details:" + expectedData);
     }
 
-    @Then("the response should include the details of the created client")
-    public void theResponseShouldIncludeTheDetailsOfTheCreatedClient() {
-        logger.info("the response should include the details of the created client");
-    }
 
     @Then("validates the response with client JSON schema")
     public void userValidatesResponseWithClientJSONSchema() {
@@ -92,5 +79,59 @@ public class ClientSteps extends BaseStepDefinition{
     public void userValidatesResponseWithClientListJSONSchema() {
         logger.info("validates the response with client list JSON schema");
         Assert.assertTrue(clientRequest.validateSchema(response, "schemas/clientListSchema.json"));
+    }
+
+    /**
+     * Creates the client instance according to the client data table
+     * @param clientDataTable
+     */
+    @Given("I have a client with the following details:")
+    public void iHaveAClientWithTheFollowingDetails(DataTable clientDataTable) {
+        logger.info(clientDataTable);
+        clientDataMap = clientDataTable.asMaps().get(0);
+
+        client = Client.builder().name(clientDataMap.get("Name"))
+                .lastName(clientDataMap.get("LastName"))
+                .country(clientDataMap.get("Country"))
+                .city(clientDataMap.get("City"))
+                .email(clientDataMap.get("Email"))
+                .phone(clientDataMap.get("Phone"))
+                .build();
+    }
+
+    /**
+     * Performs the POST request for client
+     */
+    @When("I send a POST request to create a client")
+    public void iSendAPOSTRequestToCreateAClient() {
+        logger.info("Client Created");
+        response = clientRequest.createClient(client);
+    }
+
+    /**
+     * Verifies the response include the details of the created client
+     */
+    @Then("the response should include the details of the created client")
+    public void theResponseShouldIncludeTheDetailsOfTheCreatedClient() {
+        logger.info("the response should include the details of the created client");
+        // response to client
+        responseClient = clientRequest.getClientEntity(response);
+
+        // Compare attributes between client response and the client sent
+        Assert.assertEquals(responseClient.getName(), client.getName());
+        Assert.assertEquals(responseClient.getCity(), client.getCity());
+        Assert.assertEquals(responseClient.getCountry(), client.getCountry());
+        Assert.assertEquals(responseClient.getEmail(), client.getEmail());
+        Assert.assertEquals(responseClient.getPhone(), client.getPhone());
+        logger.info("The client sent and the client from the response are the same");
+    }
+
+    /**
+     * Runs the assertion to verify if the response fits with the client schema
+     */
+    @And("validates the response with the client JSON schema")
+    public void validatesTheResponseWithTheClientJSONSchema() {
+        logger.info("validates the response with the client JSON schema");
+        Assert.assertTrue(clientRequest.validateSchema(response, "schemas/clientSchema.json"));
     }
 }
