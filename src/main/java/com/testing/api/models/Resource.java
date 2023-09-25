@@ -1,23 +1,25 @@
 package com.testing.api.models;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Client class
+ * Resource class, pojo
  */
 @Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client {
+public class Resource {
     private String name;
-    private String lastName;
-    private String country;
-    private String city;
+    private String trademark;
+    private int stock;
+    private Double price;
+    private String description;
+    private String tags;
+    private Boolean is_active;
     private String id;
-    private String email;
-    private String phone;
 }

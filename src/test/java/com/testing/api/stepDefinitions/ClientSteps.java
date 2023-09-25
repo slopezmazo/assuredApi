@@ -18,11 +18,10 @@ import java.util.List;
 /**
  * this class defines the steps implemented in the client crud feature
  */
-public class ClientSteps {
-    private static final Logger logger = LogManager.getLogger(ClientSteps.class);
-    private Response response;
+public class ClientSteps extends BaseStepDefinition{
+
     private final ClientRequest clientRequest = new ClientRequest();
-    private Client   client;
+    private Client client;
 
     @Given("there are registered clients in the system")
     public void thereAreRegisteredClientsInTheSystem() {
@@ -69,16 +68,6 @@ public class ClientSteps {
     @When("I send a PUT request to update the client with ID {string}")
     public void iSendAPUTRequestToUpdateTheClientWithID(String clientId, String requestBody) {
         logger.info("I send a PUT request to update the client with ID " + requestBody + clientId);
-    }
-
-    /**
-     * This function runs the status code assertion
-     * @param statusCode
-     */
-    @And("the response should have a status code of {int}")
-    public void theResponseShouldHaveAStatusCodeOf(int statusCode) {
-        logger.info("the response should have a status code of " + statusCode);
-        Assert.assertEquals(statusCode, response.statusCode());
     }
 
     @Then("the response should have the following details:")

@@ -1,0 +1,9 @@
+{
+  "name": "Basketball ball",
+  "trademark": "Spalding",
+  "stock": 12345,
+  "price": 54321,
+  "description": "NBA basketball ball",
+  "tags": "basketball",
+  "is_active": true
+}
