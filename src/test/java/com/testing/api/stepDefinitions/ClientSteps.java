@@ -23,6 +23,9 @@ public class ClientSteps extends BaseStepDefinition{
     private static Map<String, String> clientDataMap;
     private  Client responseClient;
 
+    /**
+     * functions to perfoms the existance of clients in the system
+     */
     @Given("there are registered clients in the system")
     public void thereAreRegisteredClientsInTheSystem() {
         response = clientRequest.getClients();
@@ -36,11 +39,6 @@ public class ClientSteps extends BaseStepDefinition{
         }
     }
 
-    @When("I retrieve the details of the client with ID {string}")
-    public void sendGETRequest(String clientId) {
-        logger.info("I retrieve the details of the client with ID " + clientId);
-    }
-
     /**
      * this function performs the get request of all clients
      */
@@ -48,28 +46,6 @@ public class ClientSteps extends BaseStepDefinition{
     public void iSendAGETRequestToViewAllTheClient() {
         logger.info("I send a GET request to view all the clients");
         response = clientRequest.getClients();
-    }
-
-
-    @When("I send a DELETE request to delete the client with ID {string}")
-    public void iSendADELETERequestToDeleteTheClientWithID(String clientId) {
-        logger.info("I send a DELETE request to delete the client with ID " + clientId);
-    }
-
-    @When("I send a PUT request to update the client with ID {string}")
-    public void iSendAPUTRequestToUpdateTheClientWithID(String clientId, String requestBody) {
-        logger.info("I send a PUT request to update the client with ID " + requestBody + clientId);
-    }
-
-    @Then("the response should have the following details:")
-    public void theResponseShouldHaveTheFollowingDetails(DataTable expectedData) {
-        logger.info("the response should have the following details:" + expectedData);
-    }
-
-
-    @Then("validates the response with client JSON schema")
-    public void userValidatesResponseWithClientJSONSchema() {
-        logger.info("validates the response with client JSON schema");
     }
 
     /**
@@ -129,7 +105,7 @@ public class ClientSteps extends BaseStepDefinition{
     /**
      * Runs the assertion to verify if the response fits with the client schema
      */
-    @And("validates the response with the client JSON schema")
+    @And("validates the response with client JSON schema")
     public void validatesTheResponseWithTheClientJSONSchema() {
         logger.info("validates the response with the client JSON schema");
         Assert.assertTrue(clientRequest.validateSchema(response, "schemas/clientSchema.json"));
