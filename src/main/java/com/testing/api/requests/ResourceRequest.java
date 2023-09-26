@@ -1,5 +1,6 @@
 package com.testing.api.requests;
 
+import com.google.gson.Gson;
 import com.testing.api.models.Resource;
 import com.testing.api.utils.Constants;
 import com.testing.api.utils.JsonFileReader;
@@ -30,9 +31,13 @@ public class ResourceRequest extends BaseRequest {
         return jsonPath.getList("", Resource.class);
     }
 
-
+    /**
+     * Performs a POST request to create a resource
+     * @param resource
+     * @return response
+     */
     public Response createResource(Resource resource) {
-        endpoint = String.format(Constants.URL, Constants.CLIENTS_PATH);
+        endpoint = String.format(Constants.URL, Constants.RESOURCE_PATH);
         return requestPost(endpoint, createBaseHeaders(), resource);
     }
     
@@ -43,5 +48,33 @@ public class ResourceRequest extends BaseRequest {
     public Response createDefaultResource() {
         JsonFileReader jsonFile = new JsonFileReader();
         return this.createResource(jsonFile.getResourceByJson(Constants.DEFAULT_RESOURCE_FILE_PATH));
+    }
+
+    /**
+     * this function performs the update request and provides the response
+     * @param resource : Resource object
+     * @param resourceId : Id of the object to update
+     * @return : Response 200 if update was successful
+     */
+    public Response updateResource(Resource resource, String resourceId) {
+        endpoint = String.format(Constants.URL_WITH_PARAM, Constants.RESOURCE_PATH, resourceId);
+        return requestPut(endpoint, createBaseHeaders(), resource);
+    }
+    /**
+     * Function to convert a String json to Resource
+     * @param resourceJson
+     * @return Resource
+     */
+    public Resource getResourceEntity(String resourceJson) {
+        Gson gson = new Gson();
+        return gson.fromJson(resourceJson, Resource.class);
+    }
+    /**
+     * this function converts response to Resource instance
+     * @param response
+     * @return resource
+     */
+    public Resource getResourceEntity(@NotNull Response response) {
+        return response.as(Resource.class);
     }
 }
